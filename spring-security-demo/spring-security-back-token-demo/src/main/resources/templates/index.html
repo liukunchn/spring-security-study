@@ -1,0 +1,26 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Hello Security!</title>
+</head>
+<body>
+<h1>Hello Security, [[${username}]]</h1>
+<h1>Hello Security, [[${name}]]</h1>
+
+<!--如果使用get请求的/logout，会响应404，因为默认配置了csrf-->
+<!--<a th:href="@{/logout}">Log Out</a>-->
+<!--解决办法是使用post请求，thymeleaf会自动加上_csrf的隐藏域表单-->
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="logout">
+</form>
+<br>
+
+<!--securityContext是存储在session中的，也可以直接获取-->
+<span th:text="${session.SPRING_SECURITY_CONTEXT}"></span>
+<br>
+
+<!--静态资源-->
+<img src="/imgs/单点登录.png">
+
+
+</body>
+</html>

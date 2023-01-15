@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.maoyou.security.mapper.UserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.maoyou.security.entity.User">
+        <id column="USERID" property="userid" />
+        <result column="USERNAME" property="username" />
+        <result column="PASSWORD" property="password" />
+        <result column="PASSWORDDEFAULTNUM" property="passworddefaultnum" />
+        <result column="PWDLASTMODIFYDATE" property="pwdlastmodifydate" />
+        <result column="LOCKED" property="locked" />
+        <result column="NAME" property="name" />
+        <result column="SEX" property="sex" />
+        <result column="IDCARDNO" property="idcardno" />
+        <result column="MOBILE" property="mobile" />
+        <result column="CREATEUSER" property="createuser" />
+        <result column="CREATETIME" property="createtime" />
+        <result column="MODIFYTIME" property="modifytime" />
+        <result column="DESTORY" property="destory" />
+        <result column="ORDERNO" property="orderno" />
+        <result column="DELETED" property="deleted" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        USERID, USERNAME, PASSWORD, PASSWORDDEFAULTNUM, PWDLASTMODIFYDATE, LOCKED, NAME, SEX, IDCARDNO, MOBILE, CREATEUSER, CREATETIME, MODIFYTIME, DESTORY, ORDERNO, DELETED
+    </sql>
+
+</mapper>
