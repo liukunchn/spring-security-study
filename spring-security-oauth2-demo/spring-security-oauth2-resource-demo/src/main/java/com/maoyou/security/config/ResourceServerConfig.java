@@ -40,8 +40,8 @@ import java.util.stream.Collectors;
 
 /**
  * 一旦标注了@EnableResourceServer，那么@EnableWebSecurity就没有作用了
- * 这个系统的认证功能将不再由@EnableResourceServer中配置的UsernamePasswordAuthenticationFilter处理，而是通过/check_token去授权服务器解析，或者直接通过jwt解析
- * 这个系统的授权功能也不再由@EnableResourceServer中配置的AuthorizationFilter处理，而是通过@EnableResourceServer中配置的HttpSecurity去处理，是否还是AuthorizationFilter?
+ * 这个系统的认证功能将不再由@EnableWebSecurity中配置的UsernamePasswordAuthenticationFilter处理，而是通过/check_token去授权服务器解析，或者直接通过jwt解析
+ * 这个系统的授权功能也不再由@EnableWebSecurity中配置的AuthorizationFilter处理，而是通过@EnableResourceServer中配置的HttpSecurity去处理，是否还是AuthorizationFilter?
  *
  * 授权码模式是一定需要一个客户端后端的，因为要用后端的接口作为回调地址，去获取token
  *
